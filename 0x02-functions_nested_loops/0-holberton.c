@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Prints Holberton followed by a new line.
+ * main - Prints Holberton as a message.
  *
  * Return: Always 0 (Success)
  */
