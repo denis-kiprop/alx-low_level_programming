@@ -1,17 +1,27 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * _puts_recursion - prints a string, followed by a new line.
- * @s: string
- * Return: no return.
+ * create_array - creates an array of chars.
+ * @size: size of the array.
+ * @c: storaged char
+ *
+ * Return: pointer of an array of chars
  */
-void _puts_recursion(char *s)
+char *create_array(unsigned int size, char c)
 {
-	if (*s != '\0')
-	{
-		_putchar(*s);
-		_puts_recursion(s + 1);
-	}
-	else
-		_putchar('\n');
+	char *cr;
+	unsigned int i;
+
+	if (size == 0)
+		return (NULL);
+
+	cr = malloc(sizeof(c) * size);
+
+	if (cr == NULL)
+		return (NULL);
+
+	for (i = 0; i < size; i++)
+		cr[i] = c;
+
+	return (cr);
 }
